@@ -1,0 +1,203 @@
+.chartShell{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    background:#111915;
+
+    overflow:hidden;
+
+}
+
+/* =============================================== */
+
+.chartTopBar{
+
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 12px;
+
+    background:#16231b;
+
+    border-bottom:1px solid #21422b;
+
+}
+
+/* =============================================== */
+
+.leftTools,
+.rightTools{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+}
+
+.leftTools button,
+.rightTools button{
+
+    height:32px;
+
+    padding:0 12px;
+
+    background:#203027;
+
+    color:#ffffff;
+
+    border:1px solid #21422b;
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    font-size:12px;
+
+}
+
+.leftTools button:hover,
+.rightTools button:hover{
+
+    background:#169b45;
+
+}
+
+/* =============================================== */
+
+.chartTitle{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+}
+
+.chartTitle strong{
+
+    color:#22d463;
+
+    font-size:15px;
+
+}
+
+.chartTitle span{
+
+    color:#b7c8be;
+
+}
+
+.chartTitle small{
+
+    color:#22d463;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+}
+
+/* =============================================== */
+
+.liveDot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22d463;
+
+    box-shadow:0 0 10px #22d463;
+
+}
+
+/* =============================================== */
+
+.chartViewport{
+
+    flex:1;
+
+    min-height:0;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#111915;
+
+}
+
+/* =============================================== */
+
+.watermark{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:80px;
+
+    font-weight:900;
+
+    letter-spacing:12px;
+
+    color:rgba(255,255,255,.03);
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/* =============================================== */
+
+@media (max-width:1200px){
+
+    .rightTools{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:800px){
+
+    .chartTopBar{
+
+        padding:0 8px;
+
+    }
+
+    .leftTools button{
+
+        padding:0 8px;
+
+    }
+
+    .chartTitle{
+
+        font-size:12px;
+
+        gap:6px;
+
+    }
+
+}

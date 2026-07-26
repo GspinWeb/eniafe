@@ -1,0 +1,141 @@
+.scannerWidget{
+
+background:#111811;
+
+border:1px solid #21422b;
+
+border-radius:18px;
+
+padding:24px;
+
+}
+
+.scannerHeader{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.scannerHeader h2{
+
+margin:0;
+
+font-size:22px;
+
+}
+
+.scannerHeader small{
+
+color:#8fa397;
+
+}
+
+.scanButton{
+
+background:#169b45;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.scanButton:hover{
+
+background:#22c55e;
+
+}
+
+.scannerTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.scannerTable th{
+
+text-align:left;
+
+padding:14px;
+
+font-size:13px;
+
+color:#8ea195;
+
+border-bottom:1px solid #21422b;
+
+}
+
+.scannerTable td{
+
+padding:16px 14px;
+
+border-bottom:1px solid #18241b;
+
+}
+
+.scannerTable tbody tr{
+
+transition:.2s;
+
+}
+
+.scannerTable tbody tr:hover{
+
+background:#18211a;
+
+}
+
+.statusReady{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:30px;
+
+background:#169b45;
+
+color:white;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.statusWatch{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:30px;
+
+background:#d19b1f;
+
+color:white;
+
+font-size:12px;
+
+font-weight:700;
+
+}

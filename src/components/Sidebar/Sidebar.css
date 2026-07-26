@@ -1,0 +1,267 @@
+.sidebar{
+
+    width:260px;
+
+    min-width:260px;
+
+    height:100%;
+
+    background:#111811;
+
+    border-right:1px solid #21422b;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:18px;
+
+    overflow:hidden;
+
+}
+
+/* ========================================== */
+
+.sidebarTop{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid #21422b;
+
+}
+
+.brandLogo{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    background:#169b45;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.brandText h2{
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#fff;
+
+}
+
+.brandText small{
+
+    color:#8ea598;
+
+    font-size:12px;
+
+}
+
+/* ========================================== */
+
+.menu{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    margin-top:20px;
+
+}
+
+.navItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    height:46px;
+
+    padding:0 14px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    color:#b8c5be;
+
+    transition:.20s;
+
+}
+
+.navItem:hover{
+
+    background:#1a241c;
+
+    color:#27d86a;
+
+}
+
+.navItem.active{
+
+    background:#169b45;
+
+    color:#fff;
+
+}
+
+.navIcon{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:17px;
+
+}
+
+.navLabel{
+
+    flex:1;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ========================================== */
+
+.sidebarStatus{
+
+    margin-top:16px;
+
+    padding:14px;
+
+    background:#151d18;
+
+    border:1px solid #21422b;
+
+    border-radius:10px;
+
+}
+
+.statusTitle{
+
+    margin-bottom:12px;
+
+    color:#8ea598;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.statusRow{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    font-size:13px;
+
+}
+
+.online{
+
+    color:#2fd66a;
+
+}
+
+/* ========================================== */
+
+.sidebarFooter{
+
+    margin-top:16px;
+
+    padding-top:16px;
+
+    border-top:1px solid #21422b;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.userAvatar{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:#169b45;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.userInfo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.userInfo strong{
+
+    font-size:14px;
+
+    color:#fff;
+
+}
+
+.userInfo small{
+
+    color:#8ea598;
+
+    font-size:12px;
+
+}

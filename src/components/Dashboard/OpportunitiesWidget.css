@@ -1,0 +1,177 @@
+.opportunitiesWidget{
+
+background:#111811;
+
+border:1px solid #21422b;
+
+border-radius:18px;
+
+padding:24px;
+
+}
+
+.opportunitiesHeader{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.opportunitiesHeader h2{
+
+margin:0;
+
+font-size:22px;
+
+}
+
+.opportunitiesHeader small{
+
+color:#90a498;
+
+}
+
+.opportunitiesHeader button{
+
+background:#169b45;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.opportunitiesHeader button:hover{
+
+background:#20c55d;
+
+}
+
+.opportunitiesTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.opportunitiesTable th{
+
+text-align:left;
+
+padding:14px;
+
+font-size:13px;
+
+color:#91a599;
+
+border-bottom:1px solid #21422b;
+
+}
+
+.opportunitiesTable td{
+
+padding:16px 14px;
+
+border-bottom:1px solid #18241b;
+
+}
+
+.opportunitiesTable tbody tr{
+
+transition:.2s;
+
+}
+
+.opportunitiesTable tbody tr:hover{
+
+background:#162016;
+
+}
+
+.buyBadge{
+
+background:#169b45;
+
+color:white;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.sellBadge{
+
+background:#d53345;
+
+color:white;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.activeStatus{
+
+background:#169b45;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.watchStatus{
+
+background:#d39a17;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.probability{
+
+color:#22d463;
+
+font-weight:700;
+
+}

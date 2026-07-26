@@ -1,0 +1,134 @@
+.signalsPage{
+
+    width:100%;
+    height:100%;
+
+    padding:20px;
+
+    background:#0d1410;
+
+    overflow:auto;
+
+}
+
+.signalsHeader{
+
+    margin-bottom:20px;
+
+}
+
+.signalsHeader h1{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    margin-bottom:6px;
+
+}
+
+.signalsHeader span{
+
+    color:#8ea598;
+
+}
+
+.signalsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:18px;
+
+}
+
+.signalCard{
+
+    background:#131d16;
+
+    border:1px solid #21422b;
+
+    border-radius:12px;
+
+    padding:18px;
+
+}
+
+.signalTop{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.signalTop h2{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+}
+
+.buyBadge{
+
+    background:#169b45;
+
+    color:#ffffff;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.sellBadge{
+
+    background:#d13d3d;
+
+    color:#ffffff;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.signalBody{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.signalBody small{
+
+    display:block;
+
+    color:#8ea598;
+
+    margin-bottom:4px;
+
+}
+
+.signalBody strong{
+
+    color:#ffffff;
+
+}
