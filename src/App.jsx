@@ -20,9 +20,13 @@ import "./index.css";
 import "./layouts/AppLayout.css";
 
 export default function App() {
+
   return (
+
     <AppLayout>
+
       <Routes>
+
         <Route
           path="/"
           element={<Navigate to="/dashboard" replace />}
@@ -46,7 +50,11 @@ export default function App() {
           path="*"
           element={<Navigate to="/dashboard" replace />}
         />
+
       </Routes>
+
     </AppLayout>
+
   );
+
 }

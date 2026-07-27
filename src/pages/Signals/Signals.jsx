@@ -33,32 +33,59 @@ const signals = [
     tp: "118620",
     confidence: "84%",
     status: "WAITING"
+  },
+  {
+    id: 4,
+    symbol: "GBP/USD",
+    side: "BUY",
+    timeframe: "H1",
+    entry: "1.36510",
+    sl: "1.36240",
+    tp: "1.37180",
+    confidence: "89%",
+    status: "LIVE"
   }
 ];
 
 export default function Signals() {
+
   return (
+
     <div className="signalsPage">
 
       <div className="signalsHeader">
 
-        <h1>Trading Signals</h1>
+        <div>
 
-        <span>
-          ENIAFE Mission Win Signal Center
-        </span>
+          <h1>Mission Win Signals</h1>
+
+          <span>
+            ENIAFE Professional Signal Center
+          </span>
+
+        </div>
 
       </div>
+
 
       <div className="signalsGrid">
 
         {signals.map((signal) => (
 
-          <div className="signalCard" key={signal.id}>
+          <div
+            className="signalCard"
+            key={signal.id}
+          >
 
             <div className="signalTop">
 
-              <h2>{signal.symbol}</h2>
+              <div>
+
+                <h2>{signal.symbol}</h2>
+
+                <small>{signal.timeframe}</small>
+
+              </div>
 
               <span
                 className={
@@ -72,37 +99,57 @@ export default function Signals() {
 
             </div>
 
+
             <div className="signalBody">
 
               <div>
-                <small>Timeframe</small>
-                <strong>{signal.timeframe}</strong>
-              </div>
 
-              <div>
                 <small>Entry</small>
+
                 <strong>{signal.entry}</strong>
+
               </div>
 
               <div>
+
                 <small>Stop Loss</small>
+
                 <strong>{signal.sl}</strong>
+
               </div>
 
               <div>
+
                 <small>Take Profit</small>
+
                 <strong>{signal.tp}</strong>
+
               </div>
 
               <div>
+
                 <small>Confidence</small>
+
                 <strong>{signal.confidence}</strong>
+
               </div>
 
-              <div>
-                <small>Status</small>
-                <strong>{signal.status}</strong>
-              </div>
+            </div>
+
+
+            <div className="signalFooter">
+
+              <span className="signalStatus">
+
+                {signal.status}
+
+              </span>
+
+              <button>
+
+                View Signal
+
+              </button>
 
             </div>
 
@@ -113,5 +160,7 @@ export default function Signals() {
       </div>
 
     </div>
+
   );
+
 }

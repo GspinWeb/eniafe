@@ -1,18 +1,30 @@
+/* ===========================================================
+   ENIAFE TERMINAL
+   CHART RESPONSIVE SHELL
+   Prepared by El-Shaaddai Trends
+   =========================================================== */
+
+
 .chartShell{
 
     width:100%;
+
     height:100%;
 
     display:flex;
-    flex-direction:column;
 
-    background:#111915;
+    flex-direction:column;
 
     overflow:hidden;
 
+    background:#111915;
+
 }
 
-/* =============================================== */
+
+
+/* ================= TOP TOOLBAR ================= */
+
 
 .chartTopBar{
 
@@ -21,7 +33,9 @@
     flex-shrink:0;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding:0 12px;
@@ -32,100 +46,72 @@
 
 }
 
-/* =============================================== */
+
+
+/* ================= TOOL GROUPS ================= */
+
 
 .leftTools,
 .rightTools{
 
     display:flex;
+
     align-items:center;
+
     gap:6px;
 
 }
+
+
 
 .leftTools button,
 .rightTools button{
 
     height:32px;
 
-    padding:0 12px;
+    padding:0 10px;
 
     background:#203027;
 
     color:#ffffff;
 
     border:1px solid #21422b;
+
     border-radius:6px;
-
-    cursor:pointer;
-
-    transition:.2s;
 
     font-size:12px;
 
 }
 
-.leftTools button:hover,
-.rightTools button:hover{
 
-    background:#169b45;
 
-}
+/* ================= TITLE ================= */
 
-/* =============================================== */
 
 .chartTitle{
 
     display:flex;
+
     align-items:center;
-    gap:10px;
 
-    color:#ffffff;
+    gap:8px;
 
-    font-size:13px;
+    color:white;
 
 }
+
+
 
 .chartTitle strong{
 
     color:#22d463;
 
-    font-size:15px;
-
 }
 
-.chartTitle span{
 
-    color:#b7c8be;
 
-}
+/* ================= CHART AREA ================= */
 
-.chartTitle small{
-
-    color:#22d463;
-
-    font-size:11px;
-
-    letter-spacing:1px;
-
-}
-
-/* =============================================== */
-
-.liveDot{
-
-    width:8px;
-    height:8px;
-
-    border-radius:50%;
-
-    background:#22d463;
-
-    box-shadow:0 0 10px #22d463;
-
-}
-
-/* =============================================== */
 
 .chartViewport{
 
@@ -133,42 +119,25 @@
 
     min-height:0;
 
-    position:relative;
+    width:100%;
 
     overflow:hidden;
+
+    position:relative;
 
     background:#111915;
 
 }
 
-/* =============================================== */
 
-.watermark{
 
-    position:absolute;
+/* ===========================================================
+   TABLET
+   =========================================================== */
 
-    left:50%;
-    top:50%;
 
-    transform:translate(-50%,-50%);
+@media(max-width:1200px){
 
-    font-size:80px;
-
-    font-weight:900;
-
-    letter-spacing:12px;
-
-    color:rgba(255,255,255,.03);
-
-    user-select:none;
-
-    pointer-events:none;
-
-}
-
-/* =============================================== */
-
-@media (max-width:1200px){
 
     .rightTools{
 
@@ -176,28 +145,63 @@
 
     }
 
+
 }
 
-@media (max-width:800px){
+
+
+/* ===========================================================
+   MOBILE
+   =========================================================== */
+
+
+@media(max-width:768px){
+
 
     .chartTopBar{
 
+        height:42px;
+
         padding:0 8px;
 
     }
+
+
 
     .leftTools button{
 
-        padding:0 8px;
+        width:30px;
+
+        padding:0;
+
+        font-size:11px;
 
     }
+
+
 
     .chartTitle{
 
         font-size:12px;
 
-        gap:6px;
+    }
+
+
+
+    .chartTitle small{
+
+        display:none;
 
     }
+
+
+
+    .chartViewport{
+
+        height:100%;
+
+    }
+
+
 
 }

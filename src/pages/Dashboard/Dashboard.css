@@ -28,9 +28,7 @@
 
 .dashboardHeader{
 
-    height:72px;
-
-    flex-shrink:0;
+    min-height:72px;
 
     display:flex;
     align-items:center;
@@ -38,7 +36,7 @@
 
     gap:18px;
 
-    padding:0 18px;
+    padding:14px 18px;
 
     background:#131d16;
 
@@ -87,6 +85,8 @@
     align-items:center;
 
     gap:8px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -149,6 +149,8 @@
 
     gap:10px;
 
+    flex-wrap:wrap;
+
 }
 
 .statusBox{
@@ -195,7 +197,7 @@
 
     display:grid;
 
-    grid-template-columns:minmax(0,1fr) 320px;
+    grid-template-columns:minmax(0,1fr);
 
     gap:16px;
 
@@ -210,11 +212,9 @@
     display:flex;
 
     width:100%;
-
     height:100%;
 
     min-width:0;
-
     min-height:0;
 
     overflow:hidden;
@@ -227,7 +227,9 @@
 
 }
 
-/* ====================================================== */
+/* ======================================================
+   DESKTOP RIGHT WIDGETS
+   ====================================================== */
 
 .rightPanel{
 
@@ -241,17 +243,9 @@
 
     overflow-y:auto;
 
-    overflow-x:hidden;
-
-    padding-right:4px;
-
 }
 
-/* ====================================================== */
-
 .widget{
-
-    flex:0 0 auto;
 
     min-height:170px;
 
@@ -275,7 +269,9 @@
 
 }
 
-/* ====================================================== */
+/* ======================================================
+   TABLET
+   ====================================================== */
 
 @media (max-width:1450px){
 
@@ -285,37 +281,89 @@
 
     }
 
-    .rightPanel{
+}
 
-        margin-top:16px;
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media (max-width:900px){
+
+    .dashboard{
+
+        height:auto;
+
+        min-height:100%;
+
+        overflow-y:auto;
+
+        overflow-x:hidden;
+
+        padding:12px;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    .dashboardHeader{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
 
         height:auto;
 
     }
 
-}
+    .workspaceInfo{
 
-@media (max-width:900px){
+        width:100%;
 
-    .dashboardHeader{
+    }
 
-        flex-wrap:wrap;
+    .workspaceInfo h1{
 
-        height:auto;
-
-        padding:14px;
+        font-size:20px;
 
     }
 
     .symbolBar{
 
-        flex-wrap:wrap;
+        width:100%;
 
     }
 
     .terminalStatus{
 
-        flex-wrap:wrap;
+        width:100%;
+
+    }
+
+    .dashboardGrid{
+
+        display:block;
+
+        height:auto;
+
+        overflow:visible;
+
+    }
+
+    .chartArea{
+
+        width:100%;
+
+        height:420px;
+
+        min-height:420px;
+
+        margin-bottom:16px;
+
+        overflow:hidden;
 
     }
 

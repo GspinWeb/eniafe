@@ -1,6 +1,10 @@
-.header{
+/* ===========================================================
+   ENIAFE TERMINAL
+   HEADER
+   Prepared by El-Shaaddai Trends
+   =========================================================== */
 
-    height:72px;
+.header{
 
     display:flex;
 
@@ -10,17 +14,17 @@
 
     gap:18px;
 
-    padding:0 18px;
+    min-height:72px;
+
+    padding:12px 18px;
 
     background:#0c140d;
 
     border-bottom:1px solid #21422b;
 
-    overflow:hidden;
-
 }
 
-/* ===================================== */
+/* ====================================================== */
 
 .brand{
 
@@ -54,7 +58,15 @@
 
     font-weight:700;
 
-    color:#fff;
+    color:#ffffff;
+
+}
+
+.brandText{
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
@@ -62,15 +74,17 @@
 
     margin:0;
 
+    color:#ffffff;
+
     font-size:20px;
 
     line-height:1;
 
-    letter-spacing:1px;
-
 }
 
 .brandText span{
+
+    margin-top:4px;
 
     color:#8ea598;
 
@@ -78,7 +92,7 @@
 
 }
 
-/* ===================================== */
+/* ====================================================== */
 
 .headerCenter{
 
@@ -88,13 +102,15 @@
 
     gap:12px;
 
-    flex-shrink:0;
+    flex:1;
+
+    justify-content:center;
 
 }
 
 .symbolSelect{
 
-    width:140px;
+    width:150px;
 
     height:40px;
 
@@ -102,11 +118,11 @@
 
     background:#162016;
 
-    color:#fff;
-
     border:1px solid #21422b;
 
     border-radius:8px;
+
+    color:#ffffff;
 
     outline:none;
 
@@ -114,7 +130,7 @@
 
 .searchBox{
 
-    width:260px;
+    width:280px;
 
     height:40px;
 
@@ -122,11 +138,11 @@
 
     background:#162016;
 
-    color:#fff;
-
     border:1px solid #21422b;
 
     border-radius:8px;
+
+    color:#ffffff;
 
     outline:none;
 
@@ -138,7 +154,7 @@
 
 }
 
-/* ===================================== */
+/* ====================================================== */
 
 .ticker{
 
@@ -192,7 +208,7 @@
 
 }
 
-/* ===================================== */
+/* ====================================================== */
 
 .headerRight{
 
@@ -208,13 +224,13 @@
 
 .session{
 
-    padding:7px 12px;
+    padding:8px 12px;
 
     background:#169b45;
 
-    border-radius:18px;
+    color:#ffffff;
 
-    color:#fff;
+    border-radius:20px;
 
     font-size:12px;
 
@@ -224,9 +240,11 @@
 
 .clock{
 
-    width:80px;
+    min-width:78px;
 
     text-align:center;
+
+    color:#ffffff;
 
     font-size:13px;
 
@@ -244,7 +262,7 @@
 
     background:#162016;
 
-    color:#fff;
+    color:#ffffff;
 
     cursor:pointer;
 
@@ -272,13 +290,15 @@
 
     justify-content:center;
 
-    font-weight:700;
+    color:#ffffff;
 
-    color:#fff;
+    font-weight:700;
 
 }
 
-/* ===================================== */
+/* ======================================================
+   TABLET
+   ====================================================== */
 
 @media (max-width:1400px){
 
@@ -290,9 +310,111 @@
 
 }
 
-@media (max-width:900px){
+@media (max-width:1024px){
 
     .searchBox{
+
+        display:none;
+
+    }
+
+}
+
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media (max-width:768px){
+
+    .header{
+
+        flex-wrap:wrap;
+
+        justify-content:flex-start;
+
+        gap:14px;
+
+        padding:12px;
+
+    }
+
+    .brand{
+
+        width:100%;
+
+    }
+
+    .headerCenter{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+    .symbolSelect{
+
+        flex:1;
+
+        width:auto;
+
+    }
+
+    .headerRight{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+    .session{
+
+        font-size:11px;
+
+        padding:7px 10px;
+
+    }
+
+    .clock{
+
+        min-width:70px;
+
+        font-size:12px;
+
+    }
+
+}
+
+/* ======================================================
+   SMALL PHONES
+   ====================================================== */
+
+@media (max-width:480px){
+
+    .brandText h2{
+
+        font-size:18px;
+
+    }
+
+    .brandText span{
+
+        font-size:11px;
+
+    }
+
+    .logo{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:20px;
+
+    }
+
+    .session{
 
         display:none;
 

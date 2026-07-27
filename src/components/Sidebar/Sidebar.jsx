@@ -1,114 +1,57 @@
 import { NavLink } from "react-router-dom";
+
 import "./Sidebar.css";
 
+const menu = [
+
+  { name: "Dashboard", path: "/dashboard" },
+  { name: "Signals", path: "/signals" },
+  { name: "Scanner", path: "/scanner" },
+  { name: "Opportunities", path: "/opportunities" },
+  { name: "Markets", path: "/markets" },
+  { name: "Charts", path: "/charts" },
+  { name: "Watchlist", path: "/watchlist" },
+  { name: "Orders", path: "/orders" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Journal", path: "/journal" },
+  { name: "Analytics", path: "/analytics" },
+  { name: "Reports", path: "/reports" },
+  { name: "Settings", path: "/settings" }
+
+];
+
 export default function Sidebar() {
+
   return (
+
     <aside className="sidebar">
 
-      <NavLink
-        to="/dashboard"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">🏠</span>
-        <span className="navText">Dashboard</span>
-      </NavLink>
+      <div className="sidebar-logo">
+        ENIAFE
+      </div>
 
-      <NavLink
-        to="/signals"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📡</span>
-        <span className="navText">Signals</span>
-      </NavLink>
+      <nav className="sidebar-menu">
 
-      <NavLink
-        to="/scanner"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">🔍</span>
-        <span className="navText">Scanner</span>
-      </NavLink>
+        {menu.map((item) => (
 
-      <NavLink
-        to="/opportunities"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">🎯</span>
-        <span className="navText">Opportunities</span>
-      </NavLink>
+          <NavLink
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) =>
+              isActive
+                ? "sidebar-link active"
+                : "sidebar-link"
+            }
+          >
+            {item.name}
+          </NavLink>
 
-      <NavLink
-        to="/markets"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">🌍</span>
-        <span className="navText">Markets</span>
-      </NavLink>
+        ))}
 
-      <NavLink
-        to="/charts"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📈</span>
-        <span className="navText">Charts</span>
-      </NavLink>
-
-      <NavLink
-        to="/watchlist"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">⭐</span>
-        <span className="navText">Watchlist</span>
-      </NavLink>
-
-      <NavLink
-        to="/orders"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📋</span>
-        <span className="navText">Orders</span>
-      </NavLink>
-
-      <NavLink
-        to="/portfolio"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">💼</span>
-        <span className="navText">Portfolio</span>
-      </NavLink>
-
-      <NavLink
-        to="/journal"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📒</span>
-        <span className="navText">Journal</span>
-      </NavLink>
-
-      <NavLink
-        to="/analytics"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📊</span>
-        <span className="navText">Analytics</span>
-      </NavLink>
-
-      <NavLink
-        to="/reports"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">📑</span>
-        <span className="navText">Reports</span>
-      </NavLink>
-
-      <NavLink
-        to="/settings"
-        className={({ isActive }) => isActive ? "navItem active" : "navItem"}
-      >
-        <span className="navIcon">⚙️</span>
-        <span className="navText">Settings</span>
-      </NavLink>
+      </nav>
 
     </aside>
+
   );
+
 }

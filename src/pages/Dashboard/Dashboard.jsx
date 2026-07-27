@@ -12,13 +12,19 @@ export default function Dashboard() {
   const frames = ["M1","M5","M15","H1","H4","D1"];
 
   const changeSymbol = (value) => {
+
     setSymbol(value);
+
     MarketShell.setSymbol(value);
+
   };
 
   const changeTimeframe = (value) => {
+
     setTimeframe(value);
+
     MarketShell.setTimeframe(value);
+
   };
 
   return (
@@ -29,13 +35,14 @@ export default function Dashboard() {
 
         <div className="workspaceInfo">
 
-          <h1>Trading Workspace</h1>
+          <h1>Mission Win Terminal</h1>
 
           <span>
-            ENIAFE Mission Win Professional Terminal
+            ENIAFE Professional Trading Workspace
           </span>
 
         </div>
+
 
         <div className="symbolBar">
 
@@ -43,53 +50,87 @@ export default function Dashboard() {
             value={symbol}
             onChange={(e)=>changeSymbol(e.target.value)}
           >
+
             <option>XAU/USD</option>
             <option>EUR/USD</option>
             <option>GBP/USD</option>
             <option>USD/JPY</option>
             <option>NAS100</option>
             <option>BTC/USD</option>
+
           </select>
 
-          {frames.map(frame => (
 
-            <button
-              key={frame}
-              className={timeframe===frame ? "tf active":"tf"}
-              onClick={()=>changeTimeframe(frame)}
-            >
-              {frame}
-            </button>
+          <div className="timeframeBar">
 
-          ))}
+            {frames.map(frame=>(
+
+              <button
+
+                key={frame}
+
+                className={
+                  timeframe===frame
+                  ? "tf active"
+                  : "tf"
+                }
+
+                onClick={()=>changeTimeframe(frame)}
+
+              >
+
+                {frame}
+
+              </button>
+
+            ))}
+
+          </div>
 
         </div>
+
 
         <div className="terminalStatus">
 
           <div className="statusBox">
+
             <small>Symbol</small>
+
             <strong>{symbol}</strong>
+
           </div>
 
+
           <div className="statusBox">
+
             <small>Spread</small>
+
             <strong>0.20</strong>
+
           </div>
 
+
           <div className="statusBox">
+
             <small>Session</small>
+
             <strong>London</strong>
+
           </div>
 
+
           <div className="statusBox">
+
             <small>Latency</small>
+
             <strong>11 ms</strong>
+
           </div>
 
         </div>
 
       </div>
+
 
       <div className="dashboardGrid">
 
