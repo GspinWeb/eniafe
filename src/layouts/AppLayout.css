@@ -10,6 +10,7 @@
     box-sizing:border-box;
 }
 
+
 html,
 body,
 #root{
@@ -17,25 +18,31 @@ body,
     width:100%;
     height:100%;
 
-    overflow:hidden;
-
     background:#08100a;
 
+    color:#f2f6f3;
+
 }
+
+
+/* ================= APP SHELL ================= */
 
 .app-shell{
 
     width:100%;
-    height:100vh;
+    min-height:100vh;
 
     display:flex;
     flex-direction:column;
 
-    overflow:hidden;
-
     background:#08100a;
 
+    overflow:hidden;
+
 }
+
+
+/* ================= BODY ================= */
 
 .app-body{
 
@@ -49,11 +56,15 @@ body,
 
 }
 
+
+/* ================= WORKSPACE ================= */
+
 .workspace{
 
     flex:1;
 
     min-width:0;
+
     min-height:0;
 
     overflow:hidden;
@@ -62,17 +73,21 @@ body,
 
 }
 
+
 .workspace-inner{
 
     width:100%;
+
     height:100%;
 
-    min-width:0;
     min-height:0;
 
     overflow:auto;
 
+    -webkit-overflow-scrolling:touch;
+
 }
+
 
 /* ================= RIGHT PANEL ================= */
 
@@ -98,6 +113,7 @@ body,
 
 }
 
+
 .panel-section{
 
     min-height:130px;
@@ -112,11 +128,13 @@ body,
 
 }
 
+
 .signal-panel{
 
     border-color:#22d463;
 
 }
+
 
 .panel-title{
 
@@ -130,6 +148,7 @@ body,
 
 }
 
+
 /* ================= MOBILE NAV ================= */
 
 .mobile-nav{
@@ -137,6 +156,7 @@ body,
     display:none;
 
 }
+
 
 /* ===========================================================
    TABLET
@@ -152,33 +172,58 @@ body,
 
 }
 
+
+
 /* ===========================================================
    MOBILE
    =========================================================== */
 
 @media(max-width:768px){
 
+
+    .app-shell{
+
+        min-height:100vh;
+
+        overflow:hidden;
+
+    }
+
+
+
     .app-body{
 
         display:block;
 
+        overflow:hidden;
+
     }
+
+
 
     .workspace{
 
         width:100%;
 
-        height:calc(100vh - 72px - 64px);
+        min-height:calc(100vh - 136px);
+
+        overflow:hidden;
 
     }
+
+
 
     .workspace-inner{
 
-        overflow:auto;
+        height:100%;
 
-        -webkit-overflow-scrolling:touch;
+        overflow-y:auto;
+
+        padding-bottom:80px;
 
     }
+
+
 
     .right-panel{
 
@@ -186,23 +231,44 @@ body,
 
     }
 
+
+
     .mobile-nav{
+
+        position:fixed;
+
+        left:0;
+
+        right:0;
+
+        bottom:0;
 
         height:64px;
 
         display:flex;
 
-        flex-shrink:0;
+        align-items:center;
+
+        justify-content:space-around;
 
         background:#101713;
 
         border-top:1px solid #21422b;
 
+        z-index:99999;
+
+        padding-bottom:env(safe-area-inset-bottom);
+
     }
 
-    .mobile-link{
+
+
+    .mobile-nav a,
+    .mobile-nav button{
 
         flex:1;
+
+        height:64px;
 
         display:flex;
 
@@ -210,29 +276,37 @@ body,
 
         justify-content:center;
 
-        text-decoration:none;
+        background:none;
+
+        border:none;
 
         color:#b7c8be;
+
+        text-decoration:none;
 
         font-size:11px;
 
         font-weight:600;
 
-        transition:.2s;
-
     }
 
-    .mobile-link.active{
 
-        background:#16231b;
+
+    .mobile-nav a.active,
+    .mobile-nav button:active{
 
         color:#22d463;
+
+        background:#16231b;
 
         border-top:2px solid #22d463;
 
     }
 
+
 }
+
+
 
 /* ===========================================================
    SMALL PHONES
@@ -240,10 +314,13 @@ body,
 
 @media(max-width:420px){
 
-    .mobile-link{
+
+    .mobile-nav a,
+    .mobile-nav button{
 
         font-size:10px;
 
     }
+
 
 }

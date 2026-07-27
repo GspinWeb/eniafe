@@ -1,25 +1,27 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Header from "../components/Header/Header";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 import "./AppLayout.css";
 
+
 export default function AppLayout({ children }) {
 
-  const location = useLocation();
-
-  const showRightPanel = location.pathname === "/dashboard";
 
   return (
 
     <div className="app-shell">
 
+
       <Header />
+
 
       <div className="app-body">
 
+
         <Sidebar />
+
 
         <main className="workspace">
 
@@ -31,112 +33,82 @@ export default function AppLayout({ children }) {
 
         </main>
 
-        {showRightPanel && (
 
-          <aside className="right-panel">
+        <aside className="right-panel">
 
-            <div className="panel-section signal-panel">
 
-              <div className="panel-title">
-                SIGNALS
-              </div>
+          <div className="panel-section signal-panel">
 
+            <div className="panel-title">
+              SIGNALS
             </div>
 
-            <div className="panel-section">
+          </div>
 
-              <div className="panel-title">
-                WATCHLIST
-              </div>
 
+          <div className="panel-section">
+
+            <div className="panel-title">
+              WATCHLIST
             </div>
 
-            <div className="panel-section">
+          </div>
 
-              <div className="panel-title">
-                MARKET DEPTH
-              </div>
 
+          <div className="panel-section">
+
+            <div className="panel-title">
+              MARKET DEPTH
             </div>
 
-            <div className="panel-section">
+          </div>
 
-              <div className="panel-title">
-                POSITIONS
-              </div>
 
+          <div className="panel-section">
+
+            <div className="panel-title">
+              POSITIONS
             </div>
 
-            <div className="panel-section">
+          </div>
 
-              <div className="panel-title">
-                ORDERS
-              </div>
 
-            </div>
+        </aside>
 
-            <div className="panel-section">
-
-              <div className="panel-title">
-                HISTORY
-              </div>
-
-            </div>
-
-          </aside>
-
-        )}
 
       </div>
 
+
       <nav className="mobile-nav">
 
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            isActive ? "mobile-link active" : "mobile-link"
-          }
-        >
+
+        <NavLink to="/dashboard">
           Home
         </NavLink>
 
-        <NavLink
-          to="/markets"
-          className={({ isActive }) =>
-            isActive ? "mobile-link active" : "mobile-link"
-          }
-        >
+
+        <NavLink to="/markets">
           Markets
         </NavLink>
 
-        <NavLink
-          to="/signals"
-          className={({ isActive }) =>
-            isActive ? "mobile-link active" : "mobile-link"
-          }
-        >
+
+        <NavLink to="/signals">
           Signals
         </NavLink>
 
-        <NavLink
-          to="/orders"
-          className={({ isActive }) =>
-            isActive ? "mobile-link active" : "mobile-link"
-          }
-        >
+
+        <NavLink to="/orders">
           Orders
         </NavLink>
 
-        <NavLink
-          to="/settings"
-          className={({ isActive }) =>
-            isActive ? "mobile-link active" : "mobile-link"
-          }
-        >
+
+        <NavLink to="/settings">
           More
         </NavLink>
 
+
       </nav>
+
 
     </div>
 
